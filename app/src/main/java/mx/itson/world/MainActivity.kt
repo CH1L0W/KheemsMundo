@@ -42,10 +42,13 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
             override fun onResponse(call: Call<List<Visita>>, response: Response<List<Visita>>) {
                 val visitas: List<Visita> = response.body()!!
                 mapa?.clear()
-                val a = 1
+
                 for(v in visitas){
                     val latLng = LatLng(v.latitud!!,v.longitud!!)
-                    mapa?.addMarker(MarkerOptions().position(latLng).icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_cheems)))
+                    mapa?.addMarker(MarkerOptions()
+                        .position(latLng)
+                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_cheems)))
+                    mapa?.setInfoWindowAdapter(infoActivity(this@MainActivity, v.lugar.toString(),v.motivo.toString(),v.responsable.toString()))
                 }
             }
 
