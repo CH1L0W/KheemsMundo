@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
 
         val mapaFragment = supportFragmentManager.findFragmentById(R.id.mapa) as SupportMapFragment
         mapaFragment.getMapAsync(this)
+        obtenerVisitas()
     }
 
     override fun onMapReady(googleMap: GoogleMap) {
@@ -36,21 +37,19 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
     fun obtenerVisitas(){
-        val call: Call<List<Visita>> = RetrofitUtil.getApi().getVisitas()
+        val call: Call<List<Visita>> = RetrofitUtil.getApi()!!.getVisitas()
         call.enqueue(object: Callback<List<Visita>>{
             override fun onResponse(call: Call<List<Visita>>, response: Response<List<Visita>>) {
                 val visitas: List<Visita> = response.body()!!
                 mapa?.clear()
-
+                val a = 1
                 for(v in visitas){
                     val latLng = LatLng(v.latitud!!,v.longitud!!)
                     mapa?.addMarker(MarkerOptions().position(latLng).icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_cheems)))
-
                 }
             }
 
             override fun onFailure(call: Call<List<Visita>>, t: Throwable) {
-                TODO("Not yet implemented")
             }
 
         })

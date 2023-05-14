@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 object RetrofitUtil {
     fun getApi(): CheemsAPI {
         val gson = GsonBuilder().create()
-        val retrofit  = Retrofit.Builder().baseUrl("https://10.232.6.138/cheems/public/api/")
+        val retrofit  = Retrofit.Builder().baseUrl("http://192.168.0.20/cheems/public/api/")
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
 
