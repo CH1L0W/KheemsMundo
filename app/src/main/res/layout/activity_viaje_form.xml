@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:text="Lugar:"
+        android:text="@string/place"
         android:textColor="@color/black"
         android:textSize="30dp" />
 
@@ -24,7 +24,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:text="Motivo:"
+        android:text="@string/reason"
         android:textColor="@color/black"
         android:textSize="30dp" />
 
@@ -39,7 +39,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:text="Responsable:"
+        android:text="@string/responsible"
         android:textColor="@color/black"
         android:textSize="30dp" />
 
@@ -53,7 +53,7 @@
 
     <fragment
         android:id="@+id/mapaForm"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_gravity="center"
         android:layout_height="300dp"
@@ -64,6 +64,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dip"
-        android:text="Continuar" />
+        android:text="@string/safe" />
 
 </LinearLayout>

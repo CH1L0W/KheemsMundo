@@ -51,7 +51,8 @@ class ViajeFormActivity : AppCompatActivity(), OnMapReadyCallback, LocationListe
     }
 
     fun guardar(lugar: String, motivo: String, responsable: String, latitud:String, longitud: String){
-        val llamada: Call<Void> = RetrofitUtil.getApi().createVisita(lugar, motivo, responsable, latitud, longitud)
+        val visita: Visita = Visita(lugar, motivo, responsable, latitud, longitud)
+        val llamada: Call<Void> = RetrofitUtil.getApi().createVisita(visita)
         llamada.enqueue(object: Callback<Void> {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
                 val a = 1;

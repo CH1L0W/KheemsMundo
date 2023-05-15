@@ -1,6 +1,12 @@
 package mx.itson.world.entidades
 
-class Visita {
+class Visita(
+    lugar: String,
+    motivo: String,
+    responsable: String,
+    latitud: String,
+    longitud: String
+) {
 
     var id: Int? = null
     var lugar: String? = null

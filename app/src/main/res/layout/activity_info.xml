@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:textColor="#000000"
         android:textSize="25dp"
-        android:text="Lugar:"
+        android:text="@string/place"
         android:layout_marginTop="15dip"
         android:layout_marginLeft="15dip"/>
 
@@ -40,7 +40,7 @@
         android:layout_below="@id/LugarText"
         android:textColor="#000000"
         android:textSize="25dp"
-        android:text="Motivo:"
+        android:text="@string/reason"
         android:layout_marginTop="15dip"
         android:layout_marginLeft="15dip"/>
 
@@ -60,7 +60,7 @@
         android:layout_below="@id/MotivoText"
         android:textColor="#000000"
         android:textSize="25dp"
-        android:text="Responsable:"
+        android:text="@string/responsible"
         android:layout_marginTop="15dip"
         android:layout_marginLeft="15dip"/>
 

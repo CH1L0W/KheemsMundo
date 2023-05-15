@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cheems por el Mundo</string>
+
+    <string name="place">Lugar:</string>
+    <string name="reason">Motivo:</string>
+    <string name="responsible">Responsable:</string>
+
+    <string name="safe">Guardar</string>
+</resources>
