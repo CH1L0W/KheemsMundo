@@ -2,6 +2,8 @@
 <resources>
     <string name="app_name">Cheems por el Mundo</string>
 
+    <string name="visit">Agregar Visita</string>
+
     <string name="place">Lugar:</string>
     <string name="reason">Motivo:</string>
     <string name="responsible">Responsable:</string>
